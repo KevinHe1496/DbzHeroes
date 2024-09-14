@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		C96666612C950099005C2419 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96666602C950099005C2419 /* AppDelegate.swift */; };
 		C96666632C950099005C2419 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96666622C950099005C2419 /* SceneDelegate.swift */; };
-		C96666652C950099005C2419 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96666642C950099005C2419 /* ViewController.swift */; };
-		C96666682C950099005C2419 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C96666672C950099005C2419 /* Base */; };
 		C966666A2C95009A005C2419 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C96666692C95009A005C2419 /* Assets.xcassets */; };
 		C966666D2C95009A005C2419 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C966666C2C95009A005C2419 /* Base */; };
+		C96666772C950C91005C2419 /* Razas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96666762C950C91005C2419 /* Razas.swift */; };
+		C96666792C950D3B005C2419 /* DbzCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96666782C950D3B005C2419 /* DbzCharacter.swift */; };
+		C966667E2C950FF4005C2419 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966667C2C950FF4005C2419 /* LoginViewController.swift */; };
+		C966667F2C950FF4005C2419 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C966667D2C950FF4005C2419 /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C966665D2C950099005C2419 /* DragonBallHeroes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonBallHeroes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96666602C950099005C2419 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C96666622C950099005C2419 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C96666642C950099005C2419 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C96666672C950099005C2419 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C96666692C95009A005C2419 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C966666C2C95009A005C2419 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C966666E2C95009A005C2419 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C96666762C950C91005C2419 /* Razas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Razas.swift; sourceTree = "<group>"; };
+		C96666782C950D3B005C2419 /* DbzCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbzCharacter.swift; sourceTree = "<group>"; };
+		C966667C2C950FF4005C2419 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C966667D2C950FF4005C2419 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,49 @@
 		C966665F2C950099005C2419 /* DragonBallHeroes */ = {
 			isa = PBXGroup;
 			children = (
+				C96666752C950C5E005C2419 /* Presentation */,
+				C96666742C950C4E005C2419 /* Models */,
 				C96666602C950099005C2419 /* AppDelegate.swift */,
 				C96666622C950099005C2419 /* SceneDelegate.swift */,
-				C96666642C950099005C2419 /* ViewController.swift */,
-				C96666662C950099005C2419 /* Main.storyboard */,
 				C96666692C95009A005C2419 /* Assets.xcassets */,
 				C966666B2C95009A005C2419 /* LaunchScreen.storyboard */,
 				C966666E2C95009A005C2419 /* Info.plist */,
 			);
 			path = DragonBallHeroes;
+			sourceTree = "<group>";
+		};
+		C96666742C950C4E005C2419 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C96666762C950C91005C2419 /* Razas.swift */,
+				C96666782C950D3B005C2419 /* DbzCharacter.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C96666752C950C5E005C2419 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				C966667B2C950DC1005C2419 /* View */,
+				C966667A2C950DB8005C2419 /* Controller */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		C966667A2C950DB8005C2419 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C966667C2C950FF4005C2419 /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C966667B2C950DC1005C2419 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C966667D2C950FF4005C2419 /* LoginViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +165,7 @@
 			files = (
 				C966666A2C95009A005C2419 /* Assets.xcassets in Resources */,
 				C966666D2C95009A005C2419 /* Base in Resources */,
-				C96666682C950099005C2419 /* Base in Resources */,
+				C966667F2C950FF4005C2419 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +176,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C96666652C950099005C2419 /* ViewController.swift in Sources */,
+				C966667E2C950FF4005C2419 /* LoginViewController.swift in Sources */,
 				C96666612C950099005C2419 /* AppDelegate.swift in Sources */,
 				C96666632C950099005C2419 /* SceneDelegate.swift in Sources */,
+				C96666772C950C91005C2419 /* Razas.swift in Sources */,
+				C96666792C950D3B005C2419 /* DbzCharacter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C96666662C950099005C2419 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C96666672C950099005C2419 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C966666B2C95009A005C2419 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -297,7 +329,6 @@
 				INFOPLIST_FILE = DragonBallHeroes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -325,7 +356,6 @@
 				INFOPLIST_FILE = DragonBallHeroes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
