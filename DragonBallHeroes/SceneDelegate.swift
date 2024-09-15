@@ -19,12 +19,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Creamos una nueva ventana
         let window = UIWindow(windowScene: scene)
         // Instanciamos el primer ViewController()
-        let viewController = LoginViewController()
+        let loginViewController = LoginViewController()
+        
         // Asignamos el primer view controller
-        window.rootViewController = viewController
+        // este será la primera pantalla que se muestre en la aplicación
+        window.rootViewController = loginViewController
         // Lo hace visible
         window.makeKeyAndVisible()
         self.window = window
     }
 }
+
+
+
 

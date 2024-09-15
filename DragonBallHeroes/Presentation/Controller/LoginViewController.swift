@@ -9,10 +9,10 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var textLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
 
 
