@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C961A5D52C96454D00B4B54B /* RazasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C961A5D32C96454D00B4B54B /* RazasTableViewCell.swift */; };
-		C961A5D62C96454D00B4B54B /* RazasTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C961A5D42C96454D00B4B54B /* RazasTableViewCell.xib */; };
+		C961A5D52C96454D00B4B54B /* PersonajesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C961A5D32C96454D00B4B54B /* PersonajesTableViewCell.swift */; };
+		C961A5D62C96454D00B4B54B /* PersonajesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C961A5D42C96454D00B4B54B /* PersonajesTableViewCell.xib */; };
 		C96666612C950099005C2419 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96666602C950099005C2419 /* AppDelegate.swift */; };
 		C96666632C950099005C2419 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96666622C950099005C2419 /* SceneDelegate.swift */; };
 		C966666A2C95009A005C2419 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C96666692C95009A005C2419 /* Assets.xcassets */; };
@@ -18,13 +18,17 @@
 		C966667E2C950FF4005C2419 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966667C2C950FF4005C2419 /* LoginViewController.swift */; };
 		C966667F2C950FF4005C2419 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C966667D2C950FF4005C2419 /* LoginViewController.xib */; };
 		C9A222502C972BED00F2325C /* UIImageView+Remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A2224F2C972BED00F2325C /* UIImageView+Remote.swift */; };
-		C9F43A3B2C960B9D00BB9CD6 /* RazasListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F43A392C960B9D00BB9CD6 /* RazasListViewController.swift */; };
+		C9A3D71F2C9B592100802215 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A3D71E2C9B592100802215 /* NetworkModel.swift */; };
+		C9A3D7212C9B600200802215 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A3D7202C9B600200802215 /* APIClient.swift */; };
+		C9D6238C2C99D8370020E6C5 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D6238A2C99D8370020E6C5 /* DescriptionViewController.swift */; };
+		C9D6238D2C99D8370020E6C5 /* DescriptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9D6238B2C99D8370020E6C5 /* DescriptionViewController.xib */; };
+		C9F43A3B2C960B9D00BB9CD6 /* PersonajesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F43A392C960B9D00BB9CD6 /* PersonajesListViewController.swift */; };
 		C9F43A3C2C960B9D00BB9CD6 /* RazasListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9F43A3A2C960B9D00BB9CD6 /* RazasListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C961A5D32C96454D00B4B54B /* RazasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RazasTableViewCell.swift; sourceTree = "<group>"; };
-		C961A5D42C96454D00B4B54B /* RazasTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RazasTableViewCell.xib; sourceTree = "<group>"; };
+		C961A5D32C96454D00B4B54B /* PersonajesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonajesTableViewCell.swift; sourceTree = "<group>"; };
+		C961A5D42C96454D00B4B54B /* PersonajesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonajesTableViewCell.xib; sourceTree = "<group>"; };
 		C966665D2C950099005C2419 /* DragonBallHeroes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonBallHeroes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96666602C950099005C2419 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C96666622C950099005C2419 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,7 +40,11 @@
 		C966667C2C950FF4005C2419 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C966667D2C950FF4005C2419 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		C9A2224F2C972BED00F2325C /* UIImageView+Remote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Remote.swift"; sourceTree = "<group>"; };
-		C9F43A392C960B9D00BB9CD6 /* RazasListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RazasListViewController.swift; sourceTree = "<group>"; };
+		C9A3D71E2C9B592100802215 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
+		C9A3D7202C9B600200802215 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		C9D6238A2C99D8370020E6C5 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
+		C9D6238B2C99D8370020E6C5 /* DescriptionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionViewController.xib; sourceTree = "<group>"; };
+		C9F43A392C960B9D00BB9CD6 /* PersonajesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonajesListViewController.swift; sourceTree = "<group>"; };
 		C9F43A3A2C960B9D00BB9CD6 /* RazasListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RazasListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +95,8 @@
 			children = (
 				C96666762C950C91005C2419 /* Razas.swift */,
 				C96666782C950D3B005C2419 /* DbzCharacter.swift */,
+				C9A3D71E2C9B592100802215 /* NetworkModel.swift */,
+				C9A3D7202C9B600200802215 /* APIClient.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -104,7 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				C966667C2C950FF4005C2419 /* LoginViewController.swift */,
-				C9F43A392C960B9D00BB9CD6 /* RazasListViewController.swift */,
+				C9F43A392C960B9D00BB9CD6 /* PersonajesListViewController.swift */,
+				C9D6238A2C99D8370020E6C5 /* DescriptionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -114,8 +125,9 @@
 			children = (
 				C966667D2C950FF4005C2419 /* LoginViewController.xib */,
 				C9F43A3A2C960B9D00BB9CD6 /* RazasListViewController.xib */,
-				C961A5D32C96454D00B4B54B /* RazasTableViewCell.swift */,
-				C961A5D42C96454D00B4B54B /* RazasTableViewCell.xib */,
+				C961A5D32C96454D00B4B54B /* PersonajesTableViewCell.swift */,
+				C961A5D42C96454D00B4B54B /* PersonajesTableViewCell.xib */,
+				C9D6238B2C99D8370020E6C5 /* DescriptionViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -187,8 +199,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9F43A3C2C960B9D00BB9CD6 /* RazasListViewController.xib in Resources */,
-				C961A5D62C96454D00B4B54B /* RazasTableViewCell.xib in Resources */,
+				C961A5D62C96454D00B4B54B /* PersonajesTableViewCell.xib in Resources */,
 				C966666A2C95009A005C2419 /* Assets.xcassets in Resources */,
+				C9D6238D2C99D8370020E6C5 /* DescriptionViewController.xib in Resources */,
 				C966666D2C95009A005C2419 /* Base in Resources */,
 				C966667F2C950FF4005C2419 /* LoginViewController.xib in Resources */,
 			);
@@ -201,13 +214,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9F43A3B2C960B9D00BB9CD6 /* RazasListViewController.swift in Sources */,
+				C9F43A3B2C960B9D00BB9CD6 /* PersonajesListViewController.swift in Sources */,
 				C966667E2C950FF4005C2419 /* LoginViewController.swift in Sources */,
 				C96666612C950099005C2419 /* AppDelegate.swift in Sources */,
 				C96666632C950099005C2419 /* SceneDelegate.swift in Sources */,
 				C96666772C950C91005C2419 /* Razas.swift in Sources */,
-				C961A5D52C96454D00B4B54B /* RazasTableViewCell.swift in Sources */,
+				C9A3D7212C9B600200802215 /* APIClient.swift in Sources */,
+				C961A5D52C96454D00B4B54B /* PersonajesTableViewCell.swift in Sources */,
+				C9D6238C2C99D8370020E6C5 /* DescriptionViewController.swift in Sources */,
 				C9A222502C972BED00F2325C /* UIImageView+Remote.swift in Sources */,
+				C9A3D71F2C9B592100802215 /* NetworkModel.swift in Sources */,
 				C96666792C950D3B005C2419 /* DbzCharacter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

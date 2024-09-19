@@ -10,10 +10,27 @@ import UIKit
 class LoginViewController: UIViewController {
 
     
+    @IBOutlet weak var loginTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
 
+    @IBAction func loginButtonPressed(_ sender: UIButton) {
+        let login = loginTextField.text!
+        let password = passwordTextField.text!
+        
+        if login == "kevin_heredia10@hotmail.com" && password == "123456"{
+            let razasListViewController = PersonajesListViewController()
+            navigationController?.show(razasListViewController, sender: self)
+        }else{
+            print("no existe")
+        }
+        
+        
+        
 
+    }
+    
 }

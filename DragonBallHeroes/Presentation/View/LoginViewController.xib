@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="DragonBallHeroes" customModuleProvider="target">
             <connections>
+                <outlet property="loginTextField" destination="e8j-KO-nBk" id="Qml-dz-Hab"/>
+                <outlet property="passwordTextField" destination="Wea-lb-mw5" id="yFY-ST-Jf1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,28 +20,37 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo4" translatesAutoresizingMaskIntoConstraints="NO" id="rHS-Sn-gKM">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dbzbackground" translatesAutoresizingMaskIntoConstraints="NO" id="rHS-Sn-gKM">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                 </imageView>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="yFd-6e-cyI">
-                    <rect key="frame" x="50" y="359" width="293" height="134.33333333333337"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="yFd-6e-cyI">
+                    <rect key="frame" x="40" y="341" width="313" height="170"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e8j-KO-nBk">
-                            <rect key="frame" x="0.0" y="0.0" width="293" height="34"/>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="kevin_heredia10@hotmail.com" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e8j-KO-nBk">
+                            <rect key="frame" x="0.0" y="0.0" width="313" height="46"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wea-lb-mw5">
-                            <rect key="frame" x="0.0" y="50" width="293" height="34"/>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wea-lb-mw5">
+                            <rect key="frame" x="0.0" y="62" width="313" height="46"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bH-0F-RBP">
-                            <rect key="frame" x="0.0" y="100" width="293" height="34.333333333333343"/>
+                            <rect key="frame" x="0.0" y="124" width="313" height="46"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="filled" title="Login"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Login">
+                                <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="baseBackgroundColor" name="redColorDbz"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="loginButtonPressed:" destination="-1" eventType="touchUpInside" id="tEc-Te-vQM"/>
+                            </connections>
                         </button>
                     </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="170" id="5Gt-vi-dZ0"/>
+                    </constraints>
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -48,9 +59,9 @@
                 <constraint firstItem="rHS-Sn-gKM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Qoa-U7-Q01"/>
                 <constraint firstAttribute="bottom" secondItem="rHS-Sn-gKM" secondAttribute="bottom" id="XcE-JH-fIQ"/>
                 <constraint firstItem="yFd-6e-cyI" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="c9U-r2-e2p"/>
-                <constraint firstItem="yFd-6e-cyI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="dbe-TI-4wv"/>
+                <constraint firstItem="yFd-6e-cyI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="dbe-TI-4wv"/>
                 <constraint firstItem="rHS-Sn-gKM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ipp-52-oZn"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yFd-6e-cyI" secondAttribute="trailing" constant="50" id="nBk-zI-exi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yFd-6e-cyI" secondAttribute="trailing" constant="40" id="nBk-zI-exi"/>
                 <constraint firstItem="yFd-6e-cyI" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="rKw-Se-4t0"/>
                 <constraint firstAttribute="trailing" secondItem="rHS-Sn-gKM" secondAttribute="trailing" id="ujJ-63-rmb"/>
             </constraints>
@@ -58,7 +69,10 @@
         </view>
     </objects>
     <resources>
-        <image name="fondo4" width="1116" height="1941"/>
+        <image name="Dbzbackground" width="1179" height="2556"/>
+        <namedColor name="redColorDbz">
+            <color red="0.99634319540000005" green="0.038374237720000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
