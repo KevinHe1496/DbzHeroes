@@ -22,6 +22,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let loginViewController = LoginViewController()
         
         let navigationController = UINavigationController(rootViewController: loginViewController)
+  
+        
         // Asignamos el primer view controller
         // este será la primera pantalla que se muestre en la aplicación
         window.rootViewController = navigationController

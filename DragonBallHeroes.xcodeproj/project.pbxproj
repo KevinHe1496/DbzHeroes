@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C906C2222CA1EBD9003067A9 /* Transformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C906C2212CA1EBD9003067A9 /* Transformation.swift */; };
 		C961A5D52C96454D00B4B54B /* PersonajesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C961A5D32C96454D00B4B54B /* PersonajesTableViewCell.swift */; };
 		C961A5D62C96454D00B4B54B /* PersonajesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C961A5D42C96454D00B4B54B /* PersonajesTableViewCell.xib */; };
 		C96666612C950099005C2419 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96666602C950099005C2419 /* AppDelegate.swift */; };
@@ -17,16 +18,21 @@
 		C96666792C950D3B005C2419 /* DbzCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96666782C950D3B005C2419 /* DbzCharacter.swift */; };
 		C966667E2C950FF4005C2419 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966667C2C950FF4005C2419 /* LoginViewController.swift */; };
 		C966667F2C950FF4005C2419 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C966667D2C950FF4005C2419 /* LoginViewController.xib */; };
+		C9883EF82C9CD72500538098 /* TransformationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9883EF62C9CD72500538098 /* TransformationsListViewController.swift */; };
+		C9883EF92C9CD72500538098 /* TranformationsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9883EF72C9CD72500538098 /* TranformationsListViewController.xib */; };
+		C9883EFC2C9CDB0000538098 /* TransformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9883EFA2C9CDB0000538098 /* TransformationTableViewCell.swift */; };
+		C9883EFD2C9CDB0000538098 /* TransformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9883EFB2C9CDB0000538098 /* TransformationTableViewCell.xib */; };
 		C9A222502C972BED00F2325C /* UIImageView+Remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A2224F2C972BED00F2325C /* UIImageView+Remote.swift */; };
 		C9A3D71F2C9B592100802215 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A3D71E2C9B592100802215 /* NetworkModel.swift */; };
 		C9A3D7212C9B600200802215 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A3D7202C9B600200802215 /* APIClient.swift */; };
 		C9D6238C2C99D8370020E6C5 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D6238A2C99D8370020E6C5 /* DescriptionViewController.swift */; };
 		C9D6238D2C99D8370020E6C5 /* DescriptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9D6238B2C99D8370020E6C5 /* DescriptionViewController.xib */; };
 		C9F43A3B2C960B9D00BB9CD6 /* PersonajesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F43A392C960B9D00BB9CD6 /* PersonajesListViewController.swift */; };
-		C9F43A3C2C960B9D00BB9CD6 /* RazasListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9F43A3A2C960B9D00BB9CD6 /* RazasListViewController.xib */; };
+		C9F43A3C2C960B9D00BB9CD6 /* PersonajesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9F43A3A2C960B9D00BB9CD6 /* PersonajesListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C906C2212CA1EBD9003067A9 /* Transformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transformation.swift; sourceTree = "<group>"; };
 		C961A5D32C96454D00B4B54B /* PersonajesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonajesTableViewCell.swift; sourceTree = "<group>"; };
 		C961A5D42C96454D00B4B54B /* PersonajesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonajesTableViewCell.xib; sourceTree = "<group>"; };
 		C966665D2C950099005C2419 /* DragonBallHeroes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonBallHeroes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,13 +45,17 @@
 		C96666782C950D3B005C2419 /* DbzCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbzCharacter.swift; sourceTree = "<group>"; };
 		C966667C2C950FF4005C2419 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C966667D2C950FF4005C2419 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		C9883EF62C9CD72500538098 /* TransformationsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationsListViewController.swift; sourceTree = "<group>"; };
+		C9883EF72C9CD72500538098 /* TranformationsListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TranformationsListViewController.xib; sourceTree = "<group>"; };
+		C9883EFA2C9CDB0000538098 /* TransformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationTableViewCell.swift; sourceTree = "<group>"; };
+		C9883EFB2C9CDB0000538098 /* TransformationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransformationTableViewCell.xib; sourceTree = "<group>"; };
 		C9A2224F2C972BED00F2325C /* UIImageView+Remote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Remote.swift"; sourceTree = "<group>"; };
 		C9A3D71E2C9B592100802215 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
 		C9A3D7202C9B600200802215 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		C9D6238A2C99D8370020E6C5 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		C9D6238B2C99D8370020E6C5 /* DescriptionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionViewController.xib; sourceTree = "<group>"; };
 		C9F43A392C960B9D00BB9CD6 /* PersonajesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonajesListViewController.swift; sourceTree = "<group>"; };
-		C9F43A3A2C960B9D00BB9CD6 /* RazasListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RazasListViewController.xib; sourceTree = "<group>"; };
+		C9F43A3A2C960B9D00BB9CD6 /* PersonajesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonajesListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +107,7 @@
 				C96666782C950D3B005C2419 /* DbzCharacter.swift */,
 				C9A3D71E2C9B592100802215 /* NetworkModel.swift */,
 				C9A3D7202C9B600200802215 /* APIClient.swift */,
+				C906C2212CA1EBD9003067A9 /* Transformation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -116,6 +127,7 @@
 				C966667C2C950FF4005C2419 /* LoginViewController.swift */,
 				C9F43A392C960B9D00BB9CD6 /* PersonajesListViewController.swift */,
 				C9D6238A2C99D8370020E6C5 /* DescriptionViewController.swift */,
+				C9883EF62C9CD72500538098 /* TransformationsListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -124,10 +136,13 @@
 			isa = PBXGroup;
 			children = (
 				C966667D2C950FF4005C2419 /* LoginViewController.xib */,
-				C9F43A3A2C960B9D00BB9CD6 /* RazasListViewController.xib */,
+				C9F43A3A2C960B9D00BB9CD6 /* PersonajesListViewController.xib */,
 				C961A5D32C96454D00B4B54B /* PersonajesTableViewCell.swift */,
 				C961A5D42C96454D00B4B54B /* PersonajesTableViewCell.xib */,
 				C9D6238B2C99D8370020E6C5 /* DescriptionViewController.xib */,
+				C9883EF72C9CD72500538098 /* TranformationsListViewController.xib */,
+				C9883EFA2C9CDB0000538098 /* TransformationTableViewCell.swift */,
+				C9883EFB2C9CDB0000538098 /* TransformationTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -198,11 +213,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9F43A3C2C960B9D00BB9CD6 /* RazasListViewController.xib in Resources */,
+				C9F43A3C2C960B9D00BB9CD6 /* PersonajesListViewController.xib in Resources */,
 				C961A5D62C96454D00B4B54B /* PersonajesTableViewCell.xib in Resources */,
 				C966666A2C95009A005C2419 /* Assets.xcassets in Resources */,
 				C9D6238D2C99D8370020E6C5 /* DescriptionViewController.xib in Resources */,
+				C9883EF92C9CD72500538098 /* TranformationsListViewController.xib in Resources */,
 				C966666D2C95009A005C2419 /* Base in Resources */,
+				C9883EFD2C9CDB0000538098 /* TransformationTableViewCell.xib in Resources */,
 				C966667F2C950FF4005C2419 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C906C2222CA1EBD9003067A9 /* Transformation.swift in Sources */,
 				C9F43A3B2C960B9D00BB9CD6 /* PersonajesListViewController.swift in Sources */,
 				C966667E2C950FF4005C2419 /* LoginViewController.swift in Sources */,
 				C96666612C950099005C2419 /* AppDelegate.swift in Sources */,
@@ -221,10 +239,12 @@
 				C96666772C950C91005C2419 /* Razas.swift in Sources */,
 				C9A3D7212C9B600200802215 /* APIClient.swift in Sources */,
 				C961A5D52C96454D00B4B54B /* PersonajesTableViewCell.swift in Sources */,
+				C9883EFC2C9CDB0000538098 /* TransformationTableViewCell.swift in Sources */,
 				C9D6238C2C99D8370020E6C5 /* DescriptionViewController.swift in Sources */,
 				C9A222502C972BED00F2325C /* UIImageView+Remote.swift in Sources */,
 				C9A3D71F2C9B592100802215 /* NetworkModel.swift in Sources */,
 				C96666792C950D3B005C2419 /* DbzCharacter.swift in Sources */,
+				C9883EF82C9CD72500538098 /* TransformationsListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

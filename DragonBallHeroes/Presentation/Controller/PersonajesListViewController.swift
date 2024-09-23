@@ -12,27 +12,49 @@ final class PersonajesListViewController: UITableViewController {
     //MARK: - TableView DataSource
     // manejar los datos y proveer celdas al tableview
     // vamos a representar objetos de tipos Razas
-    typealias DataSource = UITableViewDiffableDataSource<Int,Razas>
-    // esto nos ayuda a actualizar los datos
-    typealias SnapShot = NSDiffableDataSourceSnapshot<Int, Razas>
+    typealias DataSource = UITableViewDiffableDataSource<Int,DbzCharacter>
+    // esto nos ayuda a actualizar los datos de la tabla
+    typealias SnapShot = NSDiffableDataSourceSnapshot<Int, DbzCharacter>
     
     //MARK: - Model
-    // es nuestro array de razas
-    private let razas: [Razas] = Razas.allCases
+    
+    private let networkModel: NetworkModel
     // inicialmente este valor es nulo
     private var dataSource: DataSource?
+    
+     
+     
+    // MARK: Components
+    // es la reudita cuando esta cargando la vista
+    private var activityIndicator: UIActivityIndicatorView {
+        let spinner = UIActivityIndicatorView(style: .large)
+        spinner.startAnimating()
+        return spinner
+    }
+    
+    // MARK: - initializers
+    init(networkModel: NetworkModel = .shared) {
+        self.networkModel = networkModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    @available(*,unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     
     //MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Personajes"
+        tableView.backgroundView = activityIndicator
         
         //1. registrar nuestra celda
         // registramos nuestro celda que creamos
         tableView.register(UINib(nibName: PersonajesTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: PersonajesTableViewCell.identifier)
         //2. configurar el data source
-        dataSource = DataSource(tableView: tableView) { tableView, indexPath, raza in
+        dataSource = DataSource(tableView: tableView) { tableView, indexPath, character in
             // Obtenemos una celda reusable y la casteamos
             //a el tipo de celda que queremos representar
             guard let cell = tableView.dequeueReusableCell(withIdentifier: PersonajesTableViewCell.identifier, for: indexPath) as? PersonajesTableViewCell else{
@@ -41,7 +63,8 @@ final class PersonajesListViewController: UITableViewController {
                 return UITableViewCell()
             }
             
-            cell.configure(with: raza)
+            cell.titleLabel.text = character.name
+            cell.bodyLabel.text = character.description
             return cell
         }
         //3. añadir el data source al table view
@@ -49,19 +72,16 @@ final class PersonajesListViewController: UITableViewController {
         //4. crear un snapshot con los objetos a representar
         var snapshot = SnapShot()
         snapshot.appendSections([0])
-        snapshot.appendItems(razas)
         
         //5. aplicar el snapshot al data source para añadir los objetos
-        dataSource?.apply(snapshot)
-        
-        
-        NetworkModel.shared.getAllCharacters { result in
+        networkModel.getAllCharacters { result in
             switch result{
                 
-            case let .success(characters):
-                print(characters)
-            case let .failure(error):
-                print(error)
+            case let .success(character):
+                snapshot.appendItems(character)
+                self.dataSource?.apply(snapshot)
+            case .failure(_):
+                break
             }
         }
         
@@ -76,11 +96,19 @@ extension PersonajesListViewController{
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // aqui esta el indice de la fila
-        let character = razas[indexPath.row]
         
-        let descriptionViewController = DescriptionViewController()
-        navigationController?.show(descriptionViewController, sender: self)
+            // aqui obtenemos el personaje seleccionado del datasource
+            guard let selectedCharacter = dataSource?.itemIdentifier(for: indexPath) else {
+                return
+            }
+
+
+            // aqui instanciamos el DescriptionViewController y pasamos el personaje seleccionado
+            let descriptionViewController = DescriptionViewController(character: selectedCharacter)
+            
+            // Navegar al nuevo controlador
+            navigationController?.show(descriptionViewController, sender: self)
         
+
     }
 }

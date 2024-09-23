@@ -20,7 +20,7 @@ final class PersonajesTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
 
-    
+  /*
     //MARK: - Configuration
     // aqui adentro de la funcion configuraremos nuestros Outlets
     func configure(with raza: Razas){
@@ -32,4 +32,5 @@ final class PersonajesTableViewCell: UITableViewCell {
         }
         personajeImageView.setImage(url: imageURL)
     }
+   */
 }

@@ -11,7 +11,8 @@ import Foundation
 
 // Definimos errores
 
-enum DbzError: Error{
+enum DbzError: Error, Equatable{
+    case malformedURL
     case noData
     case decodingFailed
     case statusCode(code: Int?)
@@ -22,9 +23,9 @@ enum DbzError: Error{
 protocol APIClientProtocol {
     var session: URLSession { get }
     
-    func requestCharacters(
-        _ request: URLRequest,
-        completion: @escaping (Result<[DbzCharacter], DbzError>) -> Void)
+    func authenticate(_ request: URLRequest, completion: @escaping (Result<String, DbzError>) -> Void)
+    
+    func request<T: Decodable>(_ request: URLRequest, using: T.Type, completion: @escaping (Result<T, DbzError>) -> Void)
 }
 
 
@@ -36,52 +37,77 @@ struct APIClient: APIClientProtocol {
         self.session = session
     }
     
-    // MARK: - Solicitar Personajes
     
-    func requestCharacters(
+    // MARK: - Authenticate
+    
+    func authenticate(
         _ request: URLRequest,
-        completion: @escaping (Result<[DbzCharacter], DbzError>) -> Void) {
-            
+        completion: @escaping (Result<String, DbzError>) -> Void) {
             let task = session.dataTask(with: request) { data, response, error in
-                let result: Result<[DbzCharacter], DbzError>
-                // este bloque se ejecuta al final de la linea del contexto
+                let result: Result<String, DbzError>
+                
                 defer {
                     completion(result)
                 }
-                // Compruebo si obtengo un error
                 guard error == nil else{
                     result = .failure(.unknown)
                     return
                 }
-                // compruebo si obtengo un objeto data
                 guard let data else{
                     result = .failure(.noData)
                     return
                 }
                 
-                // obtengo los codigos de estado que devolvera el servidor como 400, 200, 201, 404, 401
                 let statusCode = (response as? HTTPURLResponse)?.statusCode
                 
-                // Compruebo si el codigo de estado es 200
-                // Tendriamos que ver la documentacion de la API que estamos usando
-                // Para comprobar los codigos de estado
                 guard statusCode == 200 else{
                     result = .failure(.statusCode(code: statusCode))
                     return
                 }
                 
-                
-                // Intentar decodificar un array de GOTCharacter a traves del objeto data
-                // Este objeto data generalmente es el Body de la respuesta del servidor
-                guard let characters = try? JSONDecoder().decode([DbzCharacter].self, from: data) else{
+                // este es el token
+                guard let token = String(data: data, encoding: .utf8) else{
                     result = .failure(.decodingFailed)
                     return
                 }
-                
-                result = .success(characters)
-                
+                result = .success(token)
             }
-            
+            task.resume()
+    }
+    
+    // MARK: - Request
+    
+    func request<T: Decodable>(
+        _ request: URLRequest,
+        using: T.Type,
+        completion: @escaping (Result<T, DbzError>) -> Void)  {
+            let task = session.dataTask(with: request) { data, response, error in
+                let result: Result<T, DbzError>
+                
+                defer {
+                    completion(result)
+                }
+                
+                guard error == nil else{
+                    result = .failure(.unknown)
+                    return
+                }
+                guard let data else{
+                    result = .failure(.noData)
+                    return
+                }
+                let statusCode = (response as?  HTTPURLResponse)?.statusCode
+                guard statusCode == 200 else{
+                    result = .failure(.statusCode(code: statusCode))
+                    return
+                }
+                
+                guard let model = try? JSONDecoder().decode(using, from: data) else{
+                    result = .failure(.decodingFailed)
+                    return
+                }
+                result = .success(model)
+            }
             task.resume()
     }
     

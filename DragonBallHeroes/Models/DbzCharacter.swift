@@ -7,12 +7,11 @@
 
 import Foundation
 
-struct DbzCharacter: Codable {
+struct DbzCharacter: Codable, Hashable {
     
-    let name: String
+    let photo: String
     let id: String
     let favorite: Bool
-    let description: String
-    let photo: String
-    
+    let name, description: String
+
 }

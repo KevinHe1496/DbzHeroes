@@ -20,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dbzbackground" translatesAutoresizingMaskIntoConstraints="NO" id="rHS-Sn-gKM">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundDbz" translatesAutoresizingMaskIntoConstraints="NO" id="rHS-Sn-gKM">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="yFd-6e-cyI">
@@ -39,7 +39,7 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bH-0F-RBP">
                             <rect key="frame" x="0.0" y="124" width="313" height="46"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="filled" title="Login">
+                            <buttonConfiguration key="configuration" style="filled" title="Continuar">
                                 <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="baseBackgroundColor" name="redColorDbz"/>
                             </buttonConfiguration>
@@ -69,7 +69,7 @@
         </view>
     </objects>
     <resources>
-        <image name="Dbzbackground" width="1179" height="2556"/>
+        <image name="backgroundDbz" width="500" height="1084"/>
         <namedColor name="redColorDbz">
             <color red="0.99634319540000005" green="0.038374237720000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

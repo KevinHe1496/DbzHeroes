@@ -19,11 +19,54 @@ final class NetworkModel{
         return componets
     }
     
+    private var token: String?
+    
     private let client: APIClientProtocol
     
     private init(client: APIClientProtocol = APIClient()){
         self.client = client
         
+    }
+    
+    func login(
+        user: String,
+        password: String,
+        completion: @escaping (Result<String, DbzError>) -> Void
+    ) {
+        var componets = baseComponents
+        componets.path = "/api/auth/login"
+        
+        guard let url = componets.url else{
+            completion(.failure(.malformedURL))
+            return
+        }
+        // este string se creara con el siguiente formato:
+        //(user):(password)
+        // kevin_heredia10@hotmail.com:123456
+        let loginString = String(format: "%@:%@", user, password)
+        guard let loginData = loginString.data(using: .utf8) else{
+            completion(.failure(.noData))
+            return
+        }
+        // Encryptamos los datos que acabamos de crear
+        // Utilizamos un algoritmo de encriptacion para no pasarle
+        // el usuario y la contraseña en texto plano
+        let base64LoginString = loginData.base64EncodedString()
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
+        
+        client.authenticate(request){ [weak self] result in
+            switch result{
+                
+            case let .success(token):
+                self?.token = token
+            case .failure:
+                break
+            }
+            completion(result)
+        }
     }
     
     func getAllCharacters(completion: @escaping (Result<[DbzCharacter], DbzError>) -> Void){
@@ -32,13 +75,61 @@ final class NetworkModel{
         components.path = "/api/heros/all"
         
         guard let url = components.url else{
+            completion(.failure(.malformedURL))
+            return
+        }
+        
+        guard let serializedBody = try? JSONSerialization.data(withJSONObject: ["name": ""]) else{
+            completion(.failure(.unknown))
+            return
+        }
+        
+        guard let token else{
+            completion(.failure(.unknown))
             return
         }
         
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "POST"
+        urlRequest.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        urlRequest.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Contect-Type")
+        urlRequest.httpBody = serializedBody
         
-        client.requestCharacters(urlRequest, completion: completion)
+        client.request(urlRequest, using: [DbzCharacter].self, completion: completion)
+        
+       
+    }
+    
+    func getTransformations(
+        for character: DbzCharacter,
+        completion: @escaping (Result<[Transformation], DbzError>) -> Void
+    ){
+        var components = baseComponents
+        components.path = "/api/heros/tranformations"
+        
+        guard let url = components.url else{
+            completion(.failure(.malformedURL))
+            return
+        }
+        
+        
+        guard let serializedBody = try? JSONSerialization.data(withJSONObject: ["id": character.id]) else{
+            completion(.failure(.unknown))
+            return
+        }
+        
+        guard let token else{
+            completion(.failure(.unknown))
+            return
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        
+        client.request(request, using: [Transformation].self, completion: completion)
+        
     }
     
 }
