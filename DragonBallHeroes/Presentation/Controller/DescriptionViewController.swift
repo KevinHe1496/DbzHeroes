@@ -10,6 +10,7 @@ class DescriptionViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    @IBOutlet weak var transformationButton: UIButton!
     // MARK: - Initializer
     init(character: DbzCharacter) {
         self.character = character
@@ -28,11 +29,14 @@ class DescriptionViewController: UIViewController {
         
         // Configuramos la vista con el character
         configureView(with: character)
+     
     }
+    
     
     // MARK: - Actions
     @IBAction func transformationButtonPressed(_ sender: UIButton) {
-        let transformationsViewController = TransformationsListViewController()
+       
+        let transformationsViewController = TransformationsListViewController(character: character)
         navigationController?.show(transformationsViewController, sender: self)
     
     }

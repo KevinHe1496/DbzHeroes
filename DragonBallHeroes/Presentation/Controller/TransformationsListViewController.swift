@@ -10,16 +10,16 @@ import UIKit
 class TransformationsListViewController: UITableViewController {
     
     // MARK: - TableView DataSource
-    typealias DataSource = UITableViewDiffableDataSource<Int, DbzCharacter>
-    typealias SnapShot = NSDiffableDataSourceSnapshot<Int, DbzCharacter>
+    typealias DataSource = UITableViewDiffableDataSource<Int, Transformation>
+    typealias SnapShot = NSDiffableDataSourceSnapshot<Int, Transformation>
     
     // MARK: - Model
     private let networkModel: NetworkModel
     private var dataSource: DataSource?
-    
+    private let character: DbzCharacter
     // MARK: - Components
     // es la reudita cuando esta cargando la vista
-    private var activiryIndicator: UIActivityIndicatorView {
+    private var activityIndicator: UIActivityIndicatorView {
         let spinner = UIActivityIndicatorView(style: .large)
         spinner.startAnimating()
         return spinner
@@ -27,8 +27,9 @@ class TransformationsListViewController: UITableViewController {
     
     // MARK: - Initializers
     
-    init(networkModel: NetworkModel = .shared) {
+    init(character: DbzCharacter, networkModel: NetworkModel = .shared) {
         self.networkModel = networkModel
+        self.character = character
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -41,13 +42,13 @@ class TransformationsListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Transformaciones"
-        tableView.backgroundView = activiryIndicator
+        tableView.backgroundView = activityIndicator
         // registro mi cell creado
         tableView.register(
             UINib(nibName: TransformationTableViewCell.identifier, bundle: nil),
             forCellReuseIdentifier: TransformationTableViewCell.identifier)
         
-        dataSource = DataSource(tableView: tableView) {  tableView, indexPath, character in
+        dataSource = DataSource(tableView: tableView) {  tableView, indexPath, transformacion in
             
             guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: TransformationTableViewCell.identifier,
@@ -56,8 +57,14 @@ class TransformationsListViewController: UITableViewController {
             }
       
             // aqui pongo el titulo y el parrafo de cell
-            cell.titleLabel.text = character.name
-            cell.bodyLabel.text = character.description
+            cell.titleLabel.text = transformacion.name
+            cell.bodyLabel.text = transformacion.description
+            
+            guard let url = URL(string: transformacion.photo) else{
+                print("url invalido")
+                return UITableViewCell()
+            }
+            cell.TransformacionImageView.setImage(url: url)
             
             return cell
         }
@@ -67,16 +74,16 @@ class TransformationsListViewController: UITableViewController {
         var snapshot = SnapShot()
         snapshot.appendSections([0])
         
-
+        
     //TODO: - Arreglar el transformacion list
         
-        networkModel.getAllCharacters { [weak self] result in
+        
+        networkModel.getTransformations(for: character) { result in
             switch result{
                 
-            case let .success(characters):
-                
-                snapshot.appendItems(characters)
-                self?.dataSource?.apply(snapshot)
+            case let .success(transformation):
+                snapshot.appendItems(transformation)
+                self.dataSource?.apply(snapshot)
             case .failure(_):
                 break
             }
@@ -89,6 +96,7 @@ class TransformationsListViewController: UITableViewController {
 
 
 extension TransformationsListViewController{
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         150
     }

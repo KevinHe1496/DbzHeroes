@@ -28,6 +28,8 @@ final class NetworkModel{
         
     }
     
+    // MARK: - Login
+    
     func login(
         user: String,
         password: String,
@@ -71,6 +73,8 @@ final class NetworkModel{
         }
     }
     
+    // MARK: - Get Personajes
+    
     func getAllCharacters(completion: @escaping (Result<[DbzCharacter], DbzError>) -> Void){
         // Creamos nuestra url request
         var components = baseComponents
@@ -102,8 +106,11 @@ final class NetworkModel{
        
     }
     
+    
+    // MARK: - Get Tranformaciones
+    
     func getTransformations(
-        for character: Transformation,
+        for character: DbzCharacter,
         completion: @escaping (Result<[Transformation], DbzError>) -> Void
     ){
         var components = baseComponents
@@ -114,7 +121,7 @@ final class NetworkModel{
             return
         }
         
-        
+        // aqui le mandamos esto a la api 
         guard let serializedBody = try? JSONSerialization.data(withJSONObject: ["id": character.id]) else{
             completion(.failure(.unknown))
             return
@@ -129,6 +136,7 @@ final class NetworkModel{
         request.httpMethod = "POST"
         request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        request.httpBody = serializedBody
         
         client.request(request, using: [Transformation].self, completion: completion)
         
