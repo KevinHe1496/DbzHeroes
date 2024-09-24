@@ -72,6 +72,7 @@ class TransformationsListViewController: UITableViewController {
             switch result{
                 
             case let .success(characters):
+                
                 snapshot.appendItems(characters)
                 self?.dataSource?.apply(snapshot)
             case .failure(_):

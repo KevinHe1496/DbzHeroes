@@ -61,7 +61,9 @@ final class NetworkModel{
             switch result{
                 
             case let .success(token):
+                
                 self?.token = token
+                LocalDataModel.save(value: token)
             case .failure:
                 break
             }
@@ -84,7 +86,7 @@ final class NetworkModel{
             return
         }
         
-        guard let token else{
+        guard let token = LocalDataModel.get() else{
             completion(.failure(.unknown))
             return
         }
@@ -92,7 +94,7 @@ final class NetworkModel{
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "POST"
         urlRequest.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
-        urlRequest.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Contect-Type")
+        urlRequest.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         urlRequest.httpBody = serializedBody
         
         client.request(urlRequest, using: [DbzCharacter].self, completion: completion)
@@ -118,7 +120,7 @@ final class NetworkModel{
             return
         }
         
-        guard let token else{
+        guard let token = LocalDataModel.get() else{
             completion(.failure(.unknown))
             return
         }

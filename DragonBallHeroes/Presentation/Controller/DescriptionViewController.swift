@@ -46,6 +46,12 @@ private extension DescriptionViewController {
     func configureView(with character: DbzCharacter) {
         titleLabel.text = character.name
         descriptionLabel.text = character.description
+        // obtenemos la imagen de la url
+        guard let url = URL(string: character.photo) else{
+            print("ruta invalida")
+            return
+        }
+        characterImageView.setImage(url: url)
         
         
     }

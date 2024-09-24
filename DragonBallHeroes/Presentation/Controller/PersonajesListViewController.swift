@@ -65,6 +65,12 @@ final class PersonajesListViewController: UITableViewController {
             
             cell.titleLabel.text = character.name
             cell.bodyLabel.text = character.description
+            guard let url = URL(string: character.photo) else{
+                print("ruta invalida")
+                return UITableViewCell()
+            }
+            cell.personajeImageView.setImage(url: url)
+            
             return cell
         }
         //3. añadir el data source al table view
@@ -92,7 +98,7 @@ final class PersonajesListViewController: UITableViewController {
 // MARK: - Table View Delagate
 extension PersonajesListViewController{
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        100
+        150
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

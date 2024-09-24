@@ -8,6 +8,7 @@
 import UIKit
 
 extension UIImageView{
+    
     func setImage(url: URL){
         // capturamos self para no crear dependencias circulares
         downloadWithURLSession(url: url) { [weak self] image in
