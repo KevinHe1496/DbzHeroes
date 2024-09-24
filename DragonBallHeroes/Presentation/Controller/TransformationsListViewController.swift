@@ -67,6 +67,8 @@ class TransformationsListViewController: UITableViewController {
         var snapshot = SnapShot()
         snapshot.appendSections([0])
         
+
+    //TODO: - Arreglar el transformacion list
         
         networkModel.getAllCharacters { [weak self] result in
             switch result{
@@ -88,6 +90,6 @@ class TransformationsListViewController: UITableViewController {
 
 extension TransformationsListViewController{
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        100
+        150
     }
 }

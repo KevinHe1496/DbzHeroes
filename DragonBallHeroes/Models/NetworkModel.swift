@@ -103,7 +103,7 @@ final class NetworkModel{
     }
     
     func getTransformations(
-        for character: DbzCharacter,
+        for character: Transformation,
         completion: @escaping (Result<[Transformation], DbzError>) -> Void
     ){
         var components = baseComponents
