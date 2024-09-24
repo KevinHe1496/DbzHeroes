@@ -2,7 +2,7 @@
 //  UIImageView+Remote.swift
 //  DragonBallHeroes
 //
-//  Created by Kevin Heredia on 15/9/24.
+//  Created by Kevin Heredia on 24/9/24.
 //
 
 import UIKit
@@ -32,3 +32,4 @@ extension UIImageView{
         .resume()
     }
 }
+

@@ -142,34 +142,5 @@ final class NetworkModel{
         
     }
     
-    func gettransformationsDescriptions(completion: @escaping (Result<[Transformation], DbzError>) -> Void){
-        
-        var components = baseComponents
-        components.path = "/api/heros/tranformations"
-        
-        guard let url = components.url else{
-            completion(.failure(.malformedURL))
-            return
-        }
-        
-        guard let seralizedBody = try? JSONSerialization.data(withJSONObject: ["name": ""]) else{
-            completion(.failure(.unknown))
-            return
-        }
-        
-        guard let token = LocalDataModel.get() else{
-            completion(.failure(.unknown))
-            return
-        }
-        
-        var urlRequest = URLRequest(url: url)
-        urlRequest.httpMethod = "POST"
-        urlRequest.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
-        urlRequest.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
-        urlRequest.httpBody = seralizedBody
-        
-        client.request(urlRequest, using: [Transformation].self, completion: completion)
-        
-    }
     
 }

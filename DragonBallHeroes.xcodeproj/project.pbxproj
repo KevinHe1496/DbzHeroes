@@ -24,7 +24,7 @@
 		C9883EFD2C9CDB0000538098 /* TransformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9883EFB2C9CDB0000538098 /* TransformationTableViewCell.xib */; };
 		C99703172CA336230068C4A6 /* TransfomationDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C99703162CA336230068C4A6 /* TransfomationDetailViewController.xib */; };
 		C99703182CA336230068C4A6 /* TransfomationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99703152CA336230068C4A6 /* TransfomationDetailViewController.swift */; };
-		C9A222502C972BED00F2325C /* UIImageView+Remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A2224F2C972BED00F2325C /* UIImageView+Remote.swift */; };
+		C997031B2CA3506F0068C4A6 /* UIImageView+Remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C997031A2CA3506F0068C4A6 /* UIImageView+Remote.swift */; };
 		C9A3D71F2C9B592100802215 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A3D71E2C9B592100802215 /* NetworkModel.swift */; };
 		C9A3D7212C9B600200802215 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A3D7202C9B600200802215 /* APIClient.swift */; };
 		C9D6238C2C99D8370020E6C5 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D6238A2C99D8370020E6C5 /* DescriptionViewController.swift */; };
@@ -53,7 +53,7 @@
 		C9883EFB2C9CDB0000538098 /* TransformationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransformationTableViewCell.xib; sourceTree = "<group>"; };
 		C99703152CA336230068C4A6 /* TransfomationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransfomationDetailViewController.swift; sourceTree = "<group>"; };
 		C99703162CA336230068C4A6 /* TransfomationDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransfomationDetailViewController.xib; sourceTree = "<group>"; };
-		C9A2224F2C972BED00F2325C /* UIImageView+Remote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Remote.swift"; sourceTree = "<group>"; };
+		C997031A2CA3506F0068C4A6 /* UIImageView+Remote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Remote.swift"; sourceTree = "<group>"; };
 		C9A3D71E2C9B592100802215 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
 		C9A3D7202C9B600200802215 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		C9D6238A2C99D8370020E6C5 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 		C966665F2C950099005C2419 /* DragonBallHeroes */ = {
 			isa = PBXGroup;
 			children = (
-				C9A2224E2C972BA100F2325C /* Extensions */,
+				C99703192CA3505D0068C4A6 /* Extensions */,
 				C96666752C950C5E005C2419 /* Presentation */,
 				C96666742C950C4E005C2419 /* Models */,
 				C96666602C950099005C2419 /* AppDelegate.swift */,
@@ -153,10 +153,10 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		C9A2224E2C972BA100F2325C /* Extensions */ = {
+		C99703192CA3505D0068C4A6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				C9A2224F2C972BED00F2325C /* UIImageView+Remote.swift */,
+				C997031A2CA3506F0068C4A6 /* UIImageView+Remote.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -247,8 +247,8 @@
 				C961A5D52C96454D00B4B54B /* PersonajesTableViewCell.swift in Sources */,
 				C9883EFC2C9CDB0000538098 /* TransformationTableViewCell.swift in Sources */,
 				C9D6238C2C99D8370020E6C5 /* DescriptionViewController.swift in Sources */,
+				C997031B2CA3506F0068C4A6 /* UIImageView+Remote.swift in Sources */,
 				C906C2242CA2075E003067A9 /* LocalDataModel.swift in Sources */,
-				C9A222502C972BED00F2325C /* UIImageView+Remote.swift in Sources */,
 				C9A3D71F2C9B592100802215 /* NetworkModel.swift in Sources */,
 				C99703182CA336230068C4A6 /* TransfomationDetailViewController.swift in Sources */,
 				C96666792C950D3B005C2419 /* DbzCharacter.swift in Sources */,
