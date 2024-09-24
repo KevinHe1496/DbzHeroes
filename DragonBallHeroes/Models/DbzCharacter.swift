@@ -15,3 +15,4 @@ struct DbzCharacter: Codable, Hashable {
     let name, description: String
 
 }
+

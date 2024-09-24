@@ -22,6 +22,8 @@
 		C9883EF92C9CD72500538098 /* TranformationsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9883EF72C9CD72500538098 /* TranformationsListViewController.xib */; };
 		C9883EFC2C9CDB0000538098 /* TransformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9883EFA2C9CDB0000538098 /* TransformationTableViewCell.swift */; };
 		C9883EFD2C9CDB0000538098 /* TransformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9883EFB2C9CDB0000538098 /* TransformationTableViewCell.xib */; };
+		C99703172CA336230068C4A6 /* TransfomationDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C99703162CA336230068C4A6 /* TransfomationDetailViewController.xib */; };
+		C99703182CA336230068C4A6 /* TransfomationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99703152CA336230068C4A6 /* TransfomationDetailViewController.swift */; };
 		C9A222502C972BED00F2325C /* UIImageView+Remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A2224F2C972BED00F2325C /* UIImageView+Remote.swift */; };
 		C9A3D71F2C9B592100802215 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A3D71E2C9B592100802215 /* NetworkModel.swift */; };
 		C9A3D7212C9B600200802215 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A3D7202C9B600200802215 /* APIClient.swift */; };
@@ -49,6 +51,8 @@
 		C9883EF72C9CD72500538098 /* TranformationsListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TranformationsListViewController.xib; sourceTree = "<group>"; };
 		C9883EFA2C9CDB0000538098 /* TransformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationTableViewCell.swift; sourceTree = "<group>"; };
 		C9883EFB2C9CDB0000538098 /* TransformationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransformationTableViewCell.xib; sourceTree = "<group>"; };
+		C99703152CA336230068C4A6 /* TransfomationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransfomationDetailViewController.swift; sourceTree = "<group>"; };
+		C99703162CA336230068C4A6 /* TransfomationDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransfomationDetailViewController.xib; sourceTree = "<group>"; };
 		C9A2224F2C972BED00F2325C /* UIImageView+Remote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Remote.swift"; sourceTree = "<group>"; };
 		C9A3D71E2C9B592100802215 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
 		C9A3D7202C9B600200802215 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 				C9F43A392C960B9D00BB9CD6 /* PersonajesListViewController.swift */,
 				C9D6238A2C99D8370020E6C5 /* DescriptionViewController.swift */,
 				C9883EF62C9CD72500538098 /* TransformationsListViewController.swift */,
+				C99703152CA336230068C4A6 /* TransfomationDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -143,6 +148,7 @@
 				C9883EF72C9CD72500538098 /* TranformationsListViewController.xib */,
 				C9883EFA2C9CDB0000538098 /* TransformationTableViewCell.swift */,
 				C9883EFB2C9CDB0000538098 /* TransformationTableViewCell.xib */,
+				C99703162CA336230068C4A6 /* TransfomationDetailViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -215,6 +221,7 @@
 			files = (
 				C9F43A3C2C960B9D00BB9CD6 /* PersonajesListViewController.xib in Resources */,
 				C961A5D62C96454D00B4B54B /* PersonajesTableViewCell.xib in Resources */,
+				C99703172CA336230068C4A6 /* TransfomationDetailViewController.xib in Resources */,
 				C966666A2C95009A005C2419 /* Assets.xcassets in Resources */,
 				C9D6238D2C99D8370020E6C5 /* DescriptionViewController.xib in Resources */,
 				C9883EF92C9CD72500538098 /* TranformationsListViewController.xib in Resources */,
@@ -243,6 +250,7 @@
 				C906C2242CA2075E003067A9 /* LocalDataModel.swift in Sources */,
 				C9A222502C972BED00F2325C /* UIImageView+Remote.swift in Sources */,
 				C9A3D71F2C9B592100802215 /* NetworkModel.swift in Sources */,
+				C99703182CA336230068C4A6 /* TransfomationDetailViewController.swift in Sources */,
 				C96666792C950D3B005C2419 /* DbzCharacter.swift in Sources */,
 				C9883EF82C9CD72500538098 /* TransformationsListViewController.swift in Sources */,
 			);

@@ -100,4 +100,14 @@ extension TransformationsListViewController{
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         150
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard let transformationSelected = dataSource?.itemIdentifier(for: indexPath) else{
+            return
+        }
+        
+        let transformationDetailVC = TransfomationDetailViewController(transformation: transformationSelected)
+        navigationController?.show(transformationDetailVC, sender: self)
+    }
 }

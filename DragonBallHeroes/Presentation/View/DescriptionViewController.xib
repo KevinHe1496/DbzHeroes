@@ -23,9 +23,9 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g8L-Tq-Bq7">
-                    <rect key="frame" x="0.0" y="59" width="393" height="300"/>
+                    <rect key="frame" x="0.0" y="59" width="393" height="200"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="300" id="Afo-6D-OLh"/>
+                        <constraint firstAttribute="height" constant="200" id="Afo-6D-OLh"/>
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nrw-BR-b7W">
@@ -39,17 +39,17 @@
                     </connections>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="q5R-gq-2Fz">
-                    <rect key="frame" x="15" y="379" width="363" height="389"/>
+                    <rect key="frame" x="15" y="279" width="363" height="72.666666666666686"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0AO-6d-Nib">
-                            <rect key="frame" x="0.0" y="0.0" width="363" height="43"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                            <rect key="frame" x="0.0" y="0.0" width="363" height="39.666666666666664"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DyF-AW-Kho">
-                            <rect key="frame" x="0.0" y="59" width="363" height="330"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <rect key="frame" x="0.0" y="55.666666666666686" width="363" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -60,7 +60,6 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="q5R-gq-2Fz" firstAttribute="top" secondItem="g8L-Tq-Bq7" secondAttribute="bottom" constant="20" id="10N-1E-Mzy"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="q5R-gq-2Fz" secondAttribute="bottom" constant="50" id="HS5-zb-0K7"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="q5R-gq-2Fz" secondAttribute="trailing" constant="15" id="IfO-LI-EbO"/>
                 <constraint firstItem="g8L-Tq-Bq7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Jcr-Bk-qkC"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Nrw-BR-b7W" secondAttribute="trailing" constant="50" id="Pek-6M-N2e"/>
