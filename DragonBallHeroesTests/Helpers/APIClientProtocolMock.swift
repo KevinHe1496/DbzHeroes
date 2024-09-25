@@ -17,9 +17,7 @@ final class APIClientProtocolMock<C: Decodable>: APIClientProtocol{
     
     var receivedResult: Result<C, DbzError>?
     
-    func authenticate(_ request: URLRequest, completion: @escaping (Result<String, DragonBallHeroes.DbzError>) -> Void) {
-
-    }
+    
     
     func request<T: Decodable>(
         _ request: URLRequest,
@@ -32,6 +30,25 @@ final class APIClientProtocolMock<C: Decodable>: APIClientProtocol{
         didCallRequest = true
         
         if let result = receivedResult as? Result<T, DbzError> {
+            completion(result)
+        }
+    }
+    
+    // saber si estoy llamando al request
+    var didCallRequestAuthenticate = false
+    // saber si llego el request
+    var receivedRequestAuthenticate: URLRequest?
+    
+    var receivedResultAuthenticate: Result<String, DbzError>?
+    
+    func authenticate(_ request: URLRequest, completion: @escaping (Result<String, DragonBallHeroes.DbzError>) -> Void) {
+        
+        // si le llego el request
+        receivedRequestAuthenticate = request
+        // sabes si estoy llamando al request
+        didCallRequestAuthenticate = true
+        // si llego el resultado que quiero
+        if let result = receivedResultAuthenticate{
             completion(result)
         }
     }
