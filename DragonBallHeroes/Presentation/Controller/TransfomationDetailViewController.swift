@@ -9,15 +9,16 @@ import UIKit
 
 final class TransfomationDetailViewController: UIViewController {
     
-    
+    // MARK: - Outlets
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionImageView: UIImageView!
     
     @IBOutlet weak var bodyLabel: UILabel!
     
-    
+    // MARK: - Model
     private let transformation: Transformation
     
+    // MARK: - Initializers
     init(transformation: Transformation) {
         
         self.transformation = transformation
@@ -40,6 +41,8 @@ final class TransfomationDetailViewController: UIViewController {
 
 
 }
+
+// MARK: - Configuration View
 
 private extension TransfomationDetailViewController{
     func configurationView(for transformation: Transformation){

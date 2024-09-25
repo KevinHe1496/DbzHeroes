@@ -75,9 +75,6 @@ class TransformationsListViewController: UITableViewController {
         snapshot.appendSections([0])
         
         
-    //TODO: - Arreglar el transformacion list
-        
-        
         networkModel.getTransformations(for: character) { result in
             switch result{
                 

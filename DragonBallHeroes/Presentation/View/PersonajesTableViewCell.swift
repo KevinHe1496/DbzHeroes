@@ -20,17 +20,5 @@ final class PersonajesTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
 
-  /*
-    //MARK: - Configuration
-    // aqui adentro de la funcion configuraremos nuestros Outlets
-    func configure(with raza: Razas){
-        // nos da el valor de nuestro enum - String
-        titleLabel.text = raza.rawValue
-        
-        guard let imageURL = raza.imageURL else{
-            return
-        }
-        personajeImageView.setImage(url: imageURL)
-    }
-   */
+
 }

@@ -12,7 +12,8 @@ struct DbzCharacter: Codable, Hashable {
     let photo: String
     let id: String
     let favorite: Bool
-    let name, description: String
+    let name: String
+    let description: String
 
 }
 

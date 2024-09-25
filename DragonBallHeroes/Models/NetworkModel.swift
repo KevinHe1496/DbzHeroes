@@ -23,7 +23,7 @@ final class NetworkModel{
     
     private let client: APIClientProtocol
     
-    private init(client: APIClientProtocol = APIClient()){
+     init(client: APIClientProtocol = APIClient()){
         self.client = client
         
     }
