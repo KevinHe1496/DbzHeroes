@@ -1,7 +1,7 @@
 
 # DragonBallHeroes App
 
-**DragonBallHeroes** es una aplicación iOS desarrollada en Swift, diseñada para mostrar a los personajes de Dragon Ball Z junto con sus transformaciones. El proyecto combina **XIBs** para la interfaz de usuario, además de integrar una **API REST** para obtener los datos de los personajes y sus transformaciones. También incluye **testing** para garantizar la calidad del código.
+**DragonBallHeroes** Es una aplicación iOS desarrollada en Swift, diseñada para mostrar a los personajes de Dragon Ball Z junto con sus transformaciones. El proyecto combina **XIBs** para la interfaz de usuario y **UITableViewControllers** para presentar la información de manera organizada. También integra una **API REST** para obtener los datos de los personajes y sus transformaciones, y incluye **Unit Testing** para garantizar la calidad del código.
 
 ## Características
 
@@ -34,7 +34,7 @@
 1. Al iniciar la aplicación, primero se mostrará una pantalla de **login**.
 2. Después de iniciar sesión, podrás ver una lista de personajes de Dragon Ball Z.
 3. Selecciona un personaje para ver una lista de sus transformaciones.
-4. Cada transformación muestra detalles como el nivel de poder y la descripción del estado.
+4. Selecciona una transformación y podrás ver una descripción del personaje en ese forma.
 
 ## Pruebas
 
