@@ -43,3 +43,7 @@ Para ejecutar las pruebas del proyecto, sigue estos pasos:
 1. Abre el proyecto en Xcode.
 2. Presiona `Cmd + U` para ejecutar las pruebas.
 
+## Conecta conmigo
+
+- [LinkedIn](https://www.linkedin.com/in/kevin-heredia-esparza/)
+- [GitHub](https://github.com/KevinHe1496)
