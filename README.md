@@ -38,7 +38,7 @@
 1. Al iniciar la aplicación, primero se mostrará una pantalla de **login**.
 2. Después de iniciar sesión, podrás ver una lista de personajes de Dragon Ball Z.
 3. Selecciona un personaje para ver una lista de sus transformaciones.
-4. Selecciona una transformación y podrás ver una descripción del personaje en ese forma.
+4. Selecciona una transformación y podrás ver una descripción del personaje en esa forma.
 
 ## Pruebas
 
