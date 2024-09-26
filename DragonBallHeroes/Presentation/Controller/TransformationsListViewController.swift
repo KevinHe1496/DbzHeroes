@@ -38,6 +38,7 @@ class TransformationsListViewController: UITableViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()

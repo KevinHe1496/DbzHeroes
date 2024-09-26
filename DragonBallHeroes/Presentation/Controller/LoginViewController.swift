@@ -2,6 +2,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    // MARK: - Outlets
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
@@ -11,6 +12,8 @@ class LoginViewController: UIViewController {
         loginTextField.delegate = self
         passwordTextField.delegate = self
     }
+
+    // MARK: - Actions
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         guard let login = loginTextField.text, !login.isEmpty,
@@ -22,12 +25,13 @@ class LoginViewController: UIViewController {
         getToken(user: login, password: password)
     }
     
+    // MARK: - Login and Token
+    
     func getToken(user: String, password: String) {
         NetworkModel.shared.login(user: user, password: password) { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
                 case let .success(token):
-                    // Aquí navegas a la siguiente pantalla después de obtener el token
                     let personajesListViewController = PersonajesListViewController()
                     self?.navigationController?.show(personajesListViewController, sender: self)
                 case .failure:
@@ -38,6 +42,7 @@ class LoginViewController: UIViewController {
     }
 }
 
+// MARK: - UITextfieldDelegate
 
 extension LoginViewController: UITextFieldDelegate{
     

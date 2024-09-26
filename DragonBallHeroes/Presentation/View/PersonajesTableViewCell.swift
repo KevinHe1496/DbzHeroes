@@ -6,12 +6,11 @@
 //
 
 import UIKit
-// final para micro optimizaciones
+
 final class PersonajesTableViewCell: UITableViewCell {
     
     // MARK: - Identifier
-    // este sera el identier de nuestro cell
-    // representando seria esto "RazasTableViewCell" debe ser siempre string
+
     static let identifier = String(describing: PersonajesTableViewCell.self)
     
     

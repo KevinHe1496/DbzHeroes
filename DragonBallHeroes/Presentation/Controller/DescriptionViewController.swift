@@ -44,6 +44,8 @@ class DescriptionViewController: UIViewController {
        
 }
 
+// MARK: - Configuration View
+
 private extension DescriptionViewController {
     
     // la vista se configura con DbzCharacter
