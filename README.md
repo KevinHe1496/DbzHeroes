@@ -6,6 +6,7 @@
 ## Características
 
 - **XIBs**: La interfaz de usuario está diseñada utilizando una combinación de XIBs para facilitar el manejo visual de las vistas.
+- **UITableView y UITableViewCell**: Utilizados para mostrar y gestionar la lista de personajes y sus transformaciones.
 - **API REST**: La aplicación interactúa con una API REST para obtener información sobre los personajes y sus transformaciones.
 - **Testing**: El proyecto incluye pruebas unitarias y de integración para asegurar la correcta funcionalidad de las principales características.
 - **Lista de Transformaciones**: Muestra una lista de transformaciones para cada personaje seleccionado.
@@ -23,15 +24,8 @@
 ## Instalación
 
 1. Clona este repositorio:
-   ```bash
-   git clone https://github.com/KevinHe1496/DbzHeroes.git
-   ```
 
-2. Abre el proyecto en Xcode:
-   ```bash
-   cd DragonBallHeroes
-   open DragonBallHeroes.xcodeproj
-   ```
+2. Abre el proyecto en Xcode.
 
 3. Ejecuta el proyecto en un simulador o dispositivo físico.
 
