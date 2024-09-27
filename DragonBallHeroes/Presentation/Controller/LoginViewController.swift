@@ -31,7 +31,7 @@ class LoginViewController: UIViewController {
         NetworkModel.shared.login(user: user, password: password) { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
-                case let .success(token):
+                case .success(_):
                     let personajesListViewController = PersonajesListViewController()
                     self?.navigationController?.show(personajesListViewController, sender: self)
                 case .failure:
