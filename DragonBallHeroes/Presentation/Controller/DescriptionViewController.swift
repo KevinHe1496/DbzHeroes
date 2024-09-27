@@ -45,6 +45,8 @@ class DescriptionViewController: UIViewController {
         
     }
     
+    //MARK: - Verificando si tiene transformación.
+    
     func checkTransformation(){
         let networkModel = NetworkModel.shared
         
