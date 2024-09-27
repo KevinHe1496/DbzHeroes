@@ -27,21 +27,48 @@ class DescriptionViewController: UIViewController {
         super.viewDidLoad()
         title = "Descripción"
         
+        checkTransformation()
+        transformationButton.isHidden = true
+        transformationButton.alpha = 0.0
+        
         // Configuramos la vista con el character
         configureView(with: character)
-     
+        
     }
     
     
     // MARK: - Actions
     @IBAction func transformationButtonPressed(_ sender: UIButton) {
-       
+        
         let transformationsViewController = TransformationsListViewController(character: character)
         navigationController?.show(transformationsViewController, sender: self)
-    
+        
     }
-
-       
+    
+    func checkTransformation(){
+        let networkModel = NetworkModel.shared
+        
+        networkModel.getTransformations(for: character) { [weak self] result in
+            switch result{
+                
+            case let .success(transfomations):
+                // si tiene transformaciones, muestra el boton
+                DispatchQueue.main.async{
+                    if !transfomations.isEmpty{
+                        self?.transformationButton.isHidden = false
+                        // le damos una animacion para que se muestre
+                        UIView.animate(withDuration: 0.3){
+                            self?.transformationButton.alpha = 1.0
+                        }
+                    }
+                }
+            case .failure(_):
+                break
+            }
+        }
+    }
+    
+    
 }
 
 // MARK: - Configuration View
