@@ -63,7 +63,7 @@ final class NetworkModelTests: XCTestCase {
         // Given
         let user = "kevin_heredia10@hotmail.com"
         let password = "123456"
-        let someResult = Result<String, DbzError>.success("")
+        let someResult = Result<String, DbzError>.success("TokenSuccess")
         mock.receivedResultAuthenticate = someResult
         var receivedResult: Result<String, DbzError>?
         // When

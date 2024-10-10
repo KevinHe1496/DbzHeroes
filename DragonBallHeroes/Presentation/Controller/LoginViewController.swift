@@ -16,6 +16,7 @@ class LoginViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
+        
         guard let login = loginTextField.text, !login.isEmpty,
               let password = passwordTextField.text, !password.isEmpty else {
     
